@@ -1,10 +1,11 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import Header from "./components/header";
 
 const App = () => {
   return (
     <>
-      <header>Header</header>
+      <Header />
       <Routes>
         <Route
           path="*"
@@ -15,7 +16,6 @@ const App = () => {
         <Route path="/products" element={<h1>Products</h1>} />
         <Route path="/sale" element={<h1>Sale</h1>} />
       </Routes>
-      <footer>Footer</footer>
     </>
   );
 };
