@@ -60,7 +60,12 @@ const Footer = () => {
       <div className={styles.divider}></div>
       <div className={styles.footer__copyright}>
         <p>© 2021 Shop. Made with love for Brightscout </p>
-        <button type="button">
+        <button
+          type="button"
+          onClick={() =>
+            window.scrollTo({ left: 0, top: 0, behavior: "smooth" })
+          }
+        >
           <FiArrowUp />
         </button>
       </div>
