@@ -1,0 +1,122 @@
+.footer {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+
+  @media (max-width: 400px) {
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    @media (max-width: 400px) {
+      flex-direction: column;
+    }
+
+    & div {
+      & h3 {
+        font-size: 1.25rem;
+        font-weight: 500;
+        color: #0a083a;
+        margin-bottom: 1rem;
+      }
+
+      & ul {
+        @media (max-width: 400px) {
+          display: none;
+        }
+        & li {
+          color: #6c6b6b;
+          cursor: pointer;
+
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  &__socials {
+    color: #6c6b6b;
+
+    @media (max-width: 400px) {
+      border-bottom: 1px solid #ccc;
+      margin-bottom: 2rem;
+    }
+
+    & img {
+      margin-bottom: 1rem;
+
+      @media (max-width: 400px) {
+        margin: 0 auto;
+      }
+    }
+
+    & p {
+      margin-bottom: 3rem;
+
+      @media (max-width: 400px) {
+        margin: 2rem 0;
+      }
+    }
+
+    & div {
+      display: flex;
+      gap: 1rem;
+
+      @media (max-width: 400px) {
+        margin-bottom: 2rem;
+        justify-content: center;
+        gap: 2rem;
+      }
+
+      & a {
+        color: #ff3c78;
+      }
+    }
+  }
+
+  &__copyright {
+    display: flex;
+    justify-content: space-between;
+    color: #6c6b6b;
+
+    @media (max-width: 400px) {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    & button {
+      width: 40px;
+      height: 40px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      color: white;
+      border: 1px solid #6c6b6b;
+      background-color: #6c6b6b;
+      border-radius: 50%;
+
+      cursor: pointer;
+    }
+  }
+}
+
+.divider {
+  margin: 3rem 0;
+  border-top: 1px solid #ccc;
+
+  @media (max-width: 400px) {
+    margin: 2rem 0;
+  }
+}
