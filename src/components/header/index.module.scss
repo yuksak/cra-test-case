@@ -1,18 +1,22 @@
+@use "../../styles/variables.scss" as var;
+
 .header {
   max-width: 1440px;
   margin: 0 auto;
   padding: 1.5rem;
+  background-color: var.$secondary-bg-color;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   &__logo {
-    width: 3rem;
+    width: 45px;
+    fill: var.$tertiary-text-color;
   }
 
   &__nav {
-    @media (max-width: 1024px) {
+    @include var.tablet {
       display: none;
     }
 
@@ -24,13 +28,13 @@
       & li a {
         padding: 0.5rem 1.5rem;
         display: block;
-        color: #0a083a;
+        color: var.$primary-text-color;
         text-decoration: none;
         position: relative;
         transition: all 0.25s ease;
 
         &:hover {
-          color: #ff3c78;
+          color: var.$tertiary-text-color;
         }
       }
     }
@@ -46,7 +50,7 @@
       border: none;
       background: none;
       cursor: pointer;
-      color: #0a083a;
+      color: var.$primary-text-color;
       transition: all 0.25s ease-in-out;
 
       & svg {
@@ -55,7 +59,7 @@
       }
 
       &:hover {
-        color: #ff3c78;
+        color: var.$tertiary-text-color;
       }
     }
   }
@@ -91,7 +95,7 @@
   position: relative;
 
   & a {
-    color: #ff3c78 !important;
+    color: var.$tertiary-text-color !important;
   }
 
   &::after {
@@ -99,7 +103,7 @@
     width: 6px;
     height: 6px;
     border-radius: 50%;
-    background: #ff3c78;
+    background: var.$tertiary-text-color;
     display: inline-block;
     position: absolute;
     bottom: 0;
@@ -111,7 +115,7 @@
   display: none;
   z-index: 10;
 
-  @media (max-width: 1024px) {
+  @include var.tablet {
     display: unset;
   }
 }
@@ -129,7 +133,7 @@
     border-radius: 50%;
 
     color: white;
-    background-color: #ff3c78;
+    background-color: var.$tertiary-text-color;
     font-size: 0.6rem;
 
     display: flex;
@@ -139,7 +143,7 @@
 }
 
 .profileButton {
-  @media (max-width: 375px) {
+  @include var.phone {
     display: none;
   }
 }

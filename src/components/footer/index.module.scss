@@ -1,11 +1,14 @@
+@use "../../styles/variables.scss" as var;
+
 .footer {
   max-width: 1440px;
   margin: 0 auto;
   padding: 5rem 1.5rem;
   display: flex;
   flex-direction: column;
+  background-color: var.$primary-bg-color;
 
-  @media (max-width: 400px) {
+  @include var.phone {
     justify-content: center;
     text-align: center;
   }
@@ -15,24 +18,27 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
-    @media (max-width: 400px) {
+    @include var.phone {
       flex-direction: column;
     }
 
     & div {
       & h3 {
         font-size: 1.25rem;
-        font-weight: 500;
-        color: #0a083a;
+        font-weight: 600;
+        color: var.$primary-text-color;
         margin-bottom: 1rem;
       }
 
       & ul {
-        @media (max-width: 400px) {
+        font-weight: 500;
+
+        @include var.phone {
           display: none;
         }
+
         & li {
-          color: #6c6b6b;
+          color: var.$secondary-text-color;
           cursor: pointer;
 
           &:hover {
@@ -44,25 +50,18 @@
   }
 
   &__socials {
-    color: #6c6b6b;
+    color: var.$secondary-text-color;
 
-    @media (max-width: 400px) {
-      border-bottom: 1px solid #ccc;
+    @include var.phone {
+      border-bottom: 1px solid var.$border-color;
       margin-bottom: 2rem;
-    }
-
-    & img {
-      margin-bottom: 1rem;
-
-      @media (max-width: 400px) {
-        margin: 0 auto;
-      }
     }
 
     & p {
       margin-bottom: 3rem;
+      font-weight: 500;
 
-      @media (max-width: 400px) {
+      @include var.phone {
         margin: 2rem 0;
       }
     }
@@ -71,24 +70,36 @@
       display: flex;
       gap: 1rem;
 
-      @media (max-width: 400px) {
+      @include var.phone {
         margin-bottom: 2rem;
         justify-content: center;
         gap: 2rem;
       }
 
       & a {
-        color: #ff3c78;
+        color: var.$tertiary-text-color;
       }
+    }
+  }
+
+  &__logo {
+    width: 45px;
+    margin-bottom: 1rem;
+    fill: var.$tertiary-text-color;
+
+    @include var.phone {
+      margin: 0 auto;
     }
   }
 
   &__copyright {
     display: flex;
     justify-content: space-between;
-    color: #6c6b6b;
+    color: var.$secondary-text-color;
+    font-weight: 500;
+    font-size: 0.8rem;
 
-    @media (max-width: 400px) {
+    @include var.phone {
       flex-direction: column;
       align-items: center;
       gap: 2rem;
@@ -103,8 +114,8 @@
       align-items: center;
 
       color: white;
-      border: 1px solid #6c6b6b;
-      background-color: #6c6b6b;
+      border: 1px solid var.$border-color;
+      background-color: var.$secondary-text-color;
       border-radius: 50%;
 
       cursor: pointer;
@@ -120,9 +131,9 @@
 
 .divider {
   margin: 3rem 0;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid var.$border-color;
 
-  @media (max-width: 400px) {
+  @include var.phone {
     margin: 2rem 0;
   }
 }
