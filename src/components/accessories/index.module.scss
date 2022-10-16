@@ -1,0 +1,151 @@
+@use "../../styles/variables.scss" as var;
+
+.accessories {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  @include var.phone {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.football {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #02be83;
+  padding: 3rem;
+
+  @include var.phone {
+    flex-direction: column;
+  }
+
+  &__image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    & img:first-child {
+      position: absolute;
+      bottom: 10px;
+      right: 40px;
+      transform: scale(0.7);
+    }
+
+    & img:nth-child(2) {
+      position: absolute;
+      top: -120px;
+      transform: scale(0.5);
+    }
+    & img:last-child {
+      position: relative;
+    }
+  }
+
+  &__category {
+    color: #0a083a;
+  }
+
+  &__title {
+    font-size: 3rem;
+    color: white;
+
+    @include var.tablet {
+      font-size: 2rem;
+    }
+  }
+
+  &__description {
+    color: white;
+    margin-bottom: 2rem;
+
+    @include var.tablet {
+      font-size: 0.9rem;
+    }
+  }
+
+  &__button {
+    border: none;
+    color: white;
+    background: #0a083a;
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+
+    @include var.tablet {
+      font-size: 0.9rem;
+      padding: 0.25rem 1.5rem;
+    }
+  }
+}
+
+.volleyball {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #0a083a;
+  padding: 3rem;
+
+  @include var.phone {
+    flex-direction: column;
+  }
+
+  &__image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    & img:first-child {
+      position: absolute;
+      bottom: -40px;
+      right: 0;
+      transform: scale(0.7);
+    }
+    & img:nth-child(2) {
+      position: absolute;
+      top: -100px;
+      transform: scale(0.7);
+    }
+    & img:last-child {
+      position: relative;
+    }
+  }
+
+  &__category {
+    color: #02be83;
+  }
+
+  &__title {
+    font-size: 3rem;
+    color: white;
+
+    @include var.tablet {
+      font-size: 2rem;
+    }
+  }
+
+  &__description {
+    color: white;
+    margin-bottom: 2rem;
+
+    @include var.tablet {
+      font-size: 0.9rem;
+    }
+  }
+
+  &__button {
+    border: none;
+    color: white;
+    background: #02be83;
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+    border-radius: 5px;
+
+    @include var.tablet {
+      font-size: 0.9rem;
+      padding: 0.25rem 1.5rem;
+    }
+  }
+}
