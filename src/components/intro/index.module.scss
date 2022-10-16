@@ -1,0 +1,339 @@
+@use "../../styles/variables.scss" as var;
+
+.intro {
+  background-color: var.$secondary-bg-color;
+  overflow: hidden;
+
+  &__block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    @include var.phone {
+      flex-direction: column;
+      padding-bottom: 2rem;
+    }
+  }
+
+  &__info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+
+    @include var.phone {
+      text-align: center;
+      gap: 2rem;
+    }
+  }
+
+  &__title {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.1;
+    color: var.$primary-text-color;
+
+    @include var.tablet {
+      font-size: 3rem;
+    }
+
+    @include var.phone {
+      font-size: 2rem;
+    }
+  }
+
+  &__text {
+    font-size: 1.25rem;
+    width: 65%;
+    font-weight: medium;
+    color: var.$secondary-text-color;
+
+    @include var.tablet {
+      width: 85%;
+    }
+
+    @include var.phone {
+      font-size: 1rem;
+      width: 90%;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 2rem;
+
+    @include var.phone {
+      justify-content: center;
+    }
+
+    & button {
+      border: none;
+
+      &:first-child {
+        border: 1px solid var.$tertiary-text-color;
+        border-radius: 5px;
+        padding: 0.25rem 1.75rem;
+        font-size: 1rem;
+        color: #ffffff;
+        background-color: var.$tertiary-text-color;
+        box-shadow: rgba(var.$tertiary-text-color, 1) 0px 10px 40px -5px;
+        cursor: pointer;
+        transition: all 0.5s;
+
+        @include var.phone {
+          padding: 0.25rem 1rem;
+        }
+
+        &:hover {
+          border-color: #ffffff;
+          background-color: #ffffff;
+          color: var.$tertiary-text-color;
+        }
+      }
+
+      &:last-child {
+        background: transparent;
+        cursor: pointer;
+        & svg {
+          width: 20px;
+          height: 20px;
+          color: var.$tertiary-text-color;
+        }
+      }
+    }
+  }
+
+  &__options {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+
+    @include var.phone {
+      flex-direction: column;
+      align-content: center;
+      margin: 0 auto;
+      gap: 1rem;
+    }
+
+    & p {
+      display: flex;
+      color: var.$secondary-text-color;
+      align-items: center;
+
+      & span {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        color: #ffffff;
+        background-color: #02be83;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  &__illustration {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    @include var.phone {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin-top: 5rem;
+    }
+
+    & > * {
+      position: absolute;
+    }
+    & > :nth-child(1) {
+      transform: scale(0.9);
+      position: relative;
+    }
+
+    & > :nth-child(2) {
+      top: 14%;
+      left: 11%;
+
+      @include var.tablet {
+        transform: scale(0.8);
+        top: 25%;
+        left: 0;
+      }
+
+      @include var.phone {
+        top: 0;
+        left: 0;
+      }
+    }
+    & > :nth-child(3) {
+      top: 18%;
+      left: 15%;
+
+      @include var.tablet {
+        transform: scale(0.8);
+        top: 28%;
+        left: 5%;
+      }
+
+      @include var.phone {
+        top: 0;
+        left: 0;
+      }
+    }
+    & > :nth-child(4) {
+      top: 40%;
+      left: 10%;
+
+      @include var.phone {
+        transform: scale(0.4);
+        top: 100px;
+        left: 0;
+      }
+    }
+    & > :nth-child(5) {
+      top: 15%;
+      left: 13%;
+
+      @include var.tablet {
+        transform: scale(0.8);
+        top: 30%;
+        left: 15%;
+      }
+
+      @include var.phone {
+        transform: scale(0.6);
+        top: 0;
+        left: 0;
+      }
+    }
+    & > :nth-child(6) {
+      top: 60%;
+      left: 30%;
+
+      @include var.tablet {
+        transform: scale(0.5);
+      }
+
+      @include var.phone {
+        transform: scale(0.7);
+        top: 0;
+        left: 150px;
+      }
+    }
+    & > :nth-child(7) {
+      top: 0;
+      right: 10%;
+
+      @include var.tablet {
+        transform: scale(0.8);
+        top: 10%;
+      }
+
+      @include var.phone {
+        transform: scale(0.5);
+        top: -50px;
+        right: 0;
+      }
+    }
+
+    & > :nth-child(8) {
+      transform: scale(1.5);
+      top: -5%;
+
+      @include var.tablet {
+        top: 10%;
+      }
+
+      @include var.phone {
+        transform: scale(1.5);
+        top: -50px;
+        left: 0;
+      }
+    }
+  }
+
+  &__message {
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    max-width: 290px;
+
+    @include var.tablet {
+      transform: scale(0.8);
+
+      top: 60%;
+      left: 0;
+    }
+
+    @include var.phone {
+      top: 125px;
+    }
+
+    & > div:first-child {
+      position: absolute;
+      top: -15px;
+      right: 20px;
+      padding: 0.5rem;
+      color: #315bff;
+      background-color: var.$primary-bg-color;
+      border-radius: 50%;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 10px;
+    }
+
+    & > div:last-child {
+      border-radius: 50px;
+      overflow: hidden;
+      display: flex;
+      gap: 1rem;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: var.$secondary-text-color;
+      background-color: var.$primary-bg-color;
+      box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 10px;
+
+      & p span {
+        font-weight: 600;
+        color: var.$primary-text-color;
+      }
+    }
+  }
+
+  &__sliders {
+    display: flex;
+    position: relative;
+    bottom: 100px;
+    gap: 1rem;
+
+    @include var.tablet {
+      bottom: 0;
+      justify-content: center;
+    }
+
+    @include var.phone {
+      position: relative;
+      justify-content: center;
+    }
+
+    & > button {
+      border: none;
+      color: #315bff;
+      background: none;
+      cursor: pointer;
+
+      &:disabled {
+        color: var.$secondary-text-color;
+      }
+
+      & > svg {
+        width: 33px;
+        height: 33px;
+      }
+    }
+  }
+}
