@@ -1,0 +1,128 @@
+@use "../../styles/variables.scss" as var;
+
+.trend {
+  background-color: var.$primary-bg-color;
+  overflow: hidden;
+
+  &__block {
+    display: block;
+    flex-direction: column;
+    padding: 5rem 0;
+
+    @include var.phone {
+      padding: 2rem 0;
+    }
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+
+    @include var.phone {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    & > h2 {
+      font-size: 3rem;
+      color: var.$primary-text-color;
+
+      @include var.tablet {
+        font-size: 2rem;
+      }
+    }
+
+    & > label {
+      display: flex;
+      align-items: center;
+      color: var.$primary-text-color;
+      gap: 1rem;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @include var.phone {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  &__image {
+    position: relative;
+    display: flex;
+    // justify-content: flex-end;
+    align-items: center;
+
+    & > img {
+      position: absolute;
+      transform: scaleX(-1) scale(2.5);
+      top: 120px;
+      left: 180px;
+      z-index: 1;
+
+      @include var.tablet {
+        transform: scaleX(-1) scale(1.2);
+        top: 50px;
+        left: 0;
+      }
+    }
+    & > div {
+      position: relative;
+      width: 400px;
+      height: 350px;
+      background: linear-gradient(270deg, #ff3c78, #ffb2b2);
+      border-radius: 0 35px 35px 0;
+      left: -25px;
+      // z-index: 1;
+
+      @include var.tablet {
+        width: 300px;
+        height: 200px;
+      }
+    }
+  }
+
+  &__product {
+    padding-top: 50px;
+    & > div {
+      display: flex;
+      gap: 0.5rem;
+      color: #fe7831;
+      margin-bottom: 1rem;
+
+      @include var.phone {
+        justify-content: center;
+      }
+    }
+
+    & > p {
+      font-size: 1.5rem;
+      font-weight: bold;
+      width: 60%;
+      margin-bottom: 1rem;
+      color: var.$primary-text-color;
+
+      @include var.tablet {
+        width: 100%;
+      }
+    }
+
+    & > h2 {
+      margin-bottom: 2rem;
+      color: var.$primary-text-color;
+    }
+
+    & > button {
+      border: none;
+      border-radius: 5px;
+      padding: 0.5rem 2rem;
+      background: #315bff;
+      color: white;
+    }
+  }
+}
