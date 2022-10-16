@@ -3,6 +3,7 @@ import Accessories from "../components/accessories";
 import Arrivals from "../components/arrivals";
 import Intro from "../components/intro";
 import Products from "../components/products";
+import Subscribe from "../components/subscribe";
 import Trend from "../components/trend";
 
 const FootWearPage = () => {
@@ -13,6 +14,7 @@ const FootWearPage = () => {
       <Accessories />
       <Trend />
       <Arrivals />
+      <Subscribe />
     </div>
   );
 };

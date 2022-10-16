@@ -2,6 +2,11 @@
 
 .arrivals {
   background-color: var.$secondary-bg-color;
+  background: linear-gradient(
+    180deg,
+    var.$secondary-bg-color 50%,
+    var.$primary-bg-color 50%
+  );
   overflow: hidden;
   padding: 4rem 0;
 

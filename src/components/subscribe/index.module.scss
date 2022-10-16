@@ -1,0 +1,126 @@
+@use "../../styles/variables.scss" as var;
+
+.subscribe {
+  background: linear-gradient(
+    180deg,
+    var.$secondary-bg-color 50%,
+    var.$primary-bg-color 50%
+  );
+  overflow: hidden;
+  box-sizing: border-box;
+
+  padding: 4rem 0;
+  position: relative;
+
+  &__block {
+    min-height: 500px;
+    width: 1180px;
+    border-radius: 0 25px 25px 0;
+    background: linear-gradient(279deg, #315bff, #8aa8f8);
+
+    @include var.tablet {
+      width: 100%;
+    }
+
+    & > div {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3rem;
+      padding: 4rem 1.5rem;
+
+      @include var.tablet {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &__title {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+
+    @include var.tablet {
+      font-size: 2rem;
+      text-align: center;
+    }
+  }
+
+  &__gradient {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(270deg, #ff3c78, #ffa6c1);
+    border-radius: 50%;
+
+    @include var.tablet {
+      width: 100%;
+      height: 100%;
+    }
+
+    @include var.phone {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  &__content {
+    flex: 1;
+  }
+
+  &__media {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    flex: 1;
+
+    @include var.tablet {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+    }
+
+    & > div {
+      position: relative;
+    }
+
+    & > img {
+      position: absolute;
+      top: 0;
+      left: 40%;
+      transform: rotate(90deg) scale(1.3);
+
+      @include var.tablet {
+        left: 30%;
+      }
+
+      @include var.tablet {
+        position: relative;
+        left: 0;
+      }
+    }
+  }
+
+  &__action {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    & > input {
+      border: none;
+      text-align: center;
+      padding: 1rem 0;
+      border-radius: 15px 15px 0 0;
+    }
+
+    & > button {
+      border: none;
+      padding: 1rem 0;
+      background: #315bff;
+      color: white;
+      cursor: pointer;
+      border-radius: 0 0 15px 15px;
+    }
+  }
+}
