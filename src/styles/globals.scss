@@ -6,6 +6,16 @@
   padding: 1.5rem;
 }
 
+.swiper-slide {
+  display: flex !important;
+  justify-content: center !important;
+}
+
+.swiper-pagination {
+  margin: 1rem 0;
+  position: relative !important;
+}
+
 *,
 *::before,
 *::after {
